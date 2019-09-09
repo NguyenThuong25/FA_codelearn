@@ -1,0 +1,17 @@
+function pascalRow(n) {
+    if (n == 0) return [1];
+    let arr = [];
+    arr[0] = [1, 0];
+    for (let i = 1; i <= n; i++) {
+        arr[i] = [];
+        arr[i][0] = 1;
+        for (let j = 1; j <= i; j++) {
+            arr[i][j] = arr[i - 1][j - 1] + arr[i - 1][j];
+        }
+        if (i < n) {
+            arr[i].push(0);
+        }
+        
+    }
+    return arr[n];
+}
