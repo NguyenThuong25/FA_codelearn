@@ -1,0 +1,13 @@
+function candles(a, b){
+
+    let nen = a;
+    let sap = a;
+
+    while(sap>= b){
+        nen= nen+Math.floor(sap/b);
+        sap= Math.floor(sap/b)+(sap%b);
+        
+    
+    }
+    return nen;
+}
