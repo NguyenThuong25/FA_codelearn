@@ -1,0 +1,23 @@
+function makeTriangle(a, b, c){
+
+    if ((a + b > c) && (a + c > b) && (b + c > a)) {
+			return 0;
+		}
+    if(a + b <= c){
+        return lap(a,b,c);
+    }
+    if(a + c <= b){
+       return lap(a,c,b);
+    }
+    if(b + c <= a){
+       return lap(b,c,a);
+    }
+}
+function lap(a,b,c){
+    let result = 0;
+    while(a + b <= c){
+        a++;
+        result++;
+    }
+    return result;
+}
